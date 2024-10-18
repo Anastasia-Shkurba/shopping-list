@@ -1,0 +1,22 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 534px;
+    margin: 0 auto;
+  }
+}
+
+.greeting {
+  padding: 19px 0 12px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF8984;
+    margin: 0 0 4px;
+  }
+}
