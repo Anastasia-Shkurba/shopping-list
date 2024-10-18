@@ -1,22 +1,64 @@
 body {
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  margin: 0;
 
   ul {
     list-style: none;
     padding: 0;
-    width: 534px;
-    margin: 0 auto;
+    max-width: 534px;
+    margin: 0 auto 45px;
+
+    li {
+      padding: 12px 0 14px 12px;
+      text-align: left;
+
+      &:nth-child(odd) {
+        background-color: #88839E;
+      }
+
+      &:nth-child(even) {
+        background-color: #7A7593;
+      }
+
+      label[for^="item"] {
+        font-size: 18px;
+        color: #fff;
+      }
+    }
   }
 }
 
 .greeting {
   padding: 19px 0 12px;
+  background-color: #4A4F56;
+
 
   h1 {
     font-size: 24px;
     font-weight: bold;
     color: #FF8984;
-    margin: 0 0 4px;
+    margin: 0 0 5px;
+  }
+
+  h1 + h2 {
+    font-size: 16px;
+    margin: 0;
+    color: #FF8984;
+    font-weight: normal;
+  }
+}
+
+main {
+  background-color: #3B3F45;
+  padding: 20px 0 135px;
+
+  p {
+    max-width: 534px;
+    margin: 45px auto 0;
+    padding: 12px 0 12px;
+    font-size: 18px;
+    color: #FF8984;
+    background-color: #4A4F56;
   }
 }
