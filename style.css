@@ -10,8 +10,11 @@ body {
     margin: 0 auto 45px;
 
     li {
-      padding: 12px 0 14px 12px;
+      padding: 9px 0 11px 9px;
       text-align: left;
+      transition: all .1s ease-in;
+      border: 3px solid transparent;
+      cursor: pointer;
 
       &:nth-child(odd) {
         background-color: #88839E;
@@ -21,10 +24,45 @@ body {
         background-color: #7A7593;
       }
 
+      input[type="checkbox"] {
+        cursor: pointer;
+
+        &:checked+label {
+          color: #9B96AC;
+          text-decoration: line-through;
+        }
+
+        &:checked+label::after {
+          color: #9B96AC;
+          text-decoration: line-through;
+          position: relative;
+          top: -2px;
+        }
+      }
+
       label[for^="item"] {
         font-size: 18px;
         color: #fff;
+        cursor: pointer;
+
+        &::after {
+          content: attr(data-info);
+          font-size: 11px;
+          color: #fff;
+          margin: 0 0 0 3px;
+        }
       }
+
+      &:hover {
+        background-color: #625E77;
+        border: 3px solid #fff;
+        border-left: none;
+        border-right: none;
+      }
+    }
+
+    li:active {
+      background-color: #FF8984;
     }
   }
 }
@@ -39,13 +77,13 @@ body {
     font-weight: bold;
     color: #FF8984;
     margin: 0 0 5px;
-  }
 
-  h1 + h2 {
-    font-size: 16px;
-    margin: 0;
-    color: #FF8984;
-    font-weight: normal;
+    &+h2 {
+      font-size: 16px;
+      margin: 0;
+      color: #FF8984;
+      font-weight: normal;
+    }
   }
 }
 
